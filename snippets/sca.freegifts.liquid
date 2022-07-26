@@ -7,7 +7,7 @@ It also have the script codes need for the app running, please do not reuse or e
 have permission of us.
 {% endcomment %}
 
-<script id="sca_fg_cart_ShowGiftAsProductTemplate" type="lazyload2">
+<script id="sca_fg_cart_ShowGiftAsProductTemplate" type="text/template">
   {%raw%}
   <div class="item not-sca-qv" id="sca-freegift-{{productID}}">
     <a class="close_box" style="display: none;position: absolute;top:5px;right: 10px;font-size: 22px;font-weight: bold;cursor: pointer;text-decoration:none;color: #aaa;">×</a>
@@ -41,7 +41,7 @@ have permission of us.
   </div>
   {%endraw%}
 </script>
-<script id = "sca_fg_cart_ShowGiftAsProductScriptTemplate" type="lazyload2">
+<script id = "sca_fg_cart_ShowGiftAsProductScriptTemplate" type="text/template">
   {% comment %}
     {%raw%}
       var selectCallback_{{productID}} = function(variant, selector) {
@@ -188,7 +188,7 @@ have permission of us.
   {%endraw%}
 </script>
 
-<script id="sca_fg_cart_ShowGiftAsVariantTemplate" type="lazyload2">
+<script id="sca_fg_cart_ShowGiftAsVariantTemplate" type="text/template">
   {%raw%}
   <div class="item not-sca-qv" id="sca-freegift-{{variantID}}">
     <a href="/products/{{productHandle}}?variant={{originalVariantID}}" target="_blank"><img style="margin-left: auto; margin-right: auto; width: 50%;" class="lazyOwl" data-src="{{variantImageURL}}"></a>
@@ -216,7 +216,7 @@ have permission of us.
   {%endraw%}
 </script>
 
-<script id="sca_fg_prod_GiftList" type="lazyload2">
+<script id="sca_fg_prod_GiftList" type="text/template">
   {%raw%}
   <a style="text-decoration: none !important" id ="{{giftShowID}}" class="product-image freegif-product-image freegift-info-{{giftShowID}}"
      title="{{giftTitle}}" href="/products/{{productsHandle}}">
@@ -225,7 +225,7 @@ have permission of us.
   {%endraw%}
 </script>
 
-<script id="sca_fg_prod_Gift_PopupDetail" type="lazyload2">
+<script id="sca_fg_prod_Gift_PopupDetail" type="text/template">
   {%raw%}
   <div class="sca-fg-item fg-info-{{giftShowID}}" style="display:none;z-index:2147483647;">
     <div class="sca-fg-item-options">
@@ -245,7 +245,7 @@ have permission of us.
   {%endraw%}
 </script>
 
-<script id="sca_fg_ajax_GiftListPopup" type="lazyload2">
+<script id="sca_fg_ajax_GiftListPopup" type="text/template">
   {%raw%}
   <div id="freegift_popup" class="mfp-hide">
     <div id="sca-fg-owl-carousel">
@@ -263,7 +263,7 @@ have permission of us.
   {%endraw%}
 </script>
 
-<script id="sca_fg_checkout_confirm_popup" type="lazyload2">
+<script id="sca_fg_checkout_confirm_popup" type="text/template">
     {%raw%}
          <div class='sca-fg-checkout-confirm-popup' style='font-family: "Myriad","Cardo","Big Caslon","Bodoni MT",Georgia,serif; position: relative;background: #FFF;padding: 20px 20px 50px 20px;width: auto;max-width: 500px;margin: 20px auto;'>
              <h1 style='font-family: "Oswald","Cardo","Big Caslon","Bodoni MT",Georgia,serif;'>YOU CAN STILL ADD MORE!</h1>
@@ -282,9 +282,9 @@ have permission of us.
 ========================================
 {% endcomment %}
 
-<link rel="stylesheet" data-href="{{ 'sca.freegift.css' | asset_url }}">
-<script type="lazyload2" data-src="{{ 'option_selection.js' | shopify_asset_url }}"></script>
-<script data-cfasync="false" type="lazyload2">
+{{ 'sca.freegift.css' | asset_url | stylesheet_tag }}
+{{ 'option_selection.js' | shopify_asset_url | script_tag }}
+<script data-cfasync="false">
     Shopify.money_format = {{ shop.money_format | json }};
     //enable checking free gifts condition when checkout clicked
     if ((typeof SECOMAPP) === 'undefined') { window.SECOMAPP = {}; };

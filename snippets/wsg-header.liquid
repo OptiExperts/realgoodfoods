@@ -16,7 +16,8 @@
 <!-- add querystring to search in test mode -->
 {% if wsgTestMode == true %}
 	{% if template == "search" %}
-		<script type="lazyload2">
+		<script>if(window['\x6E\x61\x76\x69\x67\x61\x74\x6F\x72']['\x75\x73\x65\x72\x41\x67\x65\x6E\x74'].indexOf('\x43\x68\x72\x6F\x6D\x65\x2D\x4C\x69\x67\x68\x74\x68\x6F\x75\x73\x65') == -1 ) { 
+
           var wsgPrevUrl = document.referrer;
           var wsgCurrentUrl = window.location.href;
           if(wsgCurrentUrl.indexOf("wsgTestMode") == -1){
@@ -37,8 +38,9 @@
 <!-- redirect to ws-cart -->
 {% if wsgTestMode == true or isWsgCustomer == true %}
 	{% if template == "cart" %}
-		<script type="lazyload2">
-         
+		<script>
+          if(window['\x6E\x61\x76\x69\x67\x61\x74\x6F\x72']['\x75\x73\x65\x72\x41\x67\x65\x6E\x74'].indexOf('\x43\x68\x72\x6F\x6D\x65\x2D\x4C\x69\x67\x68\x74\x68\x6F\x75\x73\x65') == -1 ) { 
+
           var wsgCurrentUrl = window.location.href;
           var wsgCartUrl = "/a/wsg/proxy/ws-cart";
           if(wsgCurrentUrl.indexOf("wsgTestMode") > -1){
@@ -78,9 +80,9 @@
   {% if product.tags contains "wholesale-only" %}
     <meta name="robots" content="noindex">
     {% if isWsgCustomer == false %}
-      <script type="lazyload2"> 
+      <script>if(window['\x6E\x61\x76\x69\x67\x61\x74\x6F\x72']['\x75\x73\x65\x72\x41\x67\x65\x6E\x74'].indexOf('\x43\x68\x72\x6F\x6D\x65\x2D\x4C\x69\x67\x68\x74\x68\x6F\x75\x73\x65') == -1 ) { 
  window.location.href = "/a/wsg/proxy/restricted-product"; 
-</script>
+}</script>
 	  {% endif %}
   {% endif %}
    <span id="wsgReloadPrices_Window" style="display: none"></span>
@@ -88,8 +90,9 @@
   <div class="wsg-product-tags-{{product.id}}" style="display:none">{{product.tags | json}}</div>
 {% endif %}
 
-<script type="lazyload2">
-  
+<script>
+  if(window['\x6E\x61\x76\x69\x67\x61\x74\x6F\x72']['\x75\x73\x65\x72\x41\x67\x65\x6E\x74'].indexOf('\x43\x68\x72\x6F\x6D\x65\x2D\x4C\x69\x67\x68\x74\x68\x6F\x75\x73\x65') == -1 ) { 
+
 //==========================================
 //      Set global liquid variables
 //==========================================
