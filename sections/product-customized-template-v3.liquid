@@ -1104,7 +1104,7 @@
 <div class="section_whats_different">
     <a href="https://realgoodfoods.com/pages/us-vs-them">
       {%- if section.settings.whatsdiff_img != '' -%}
-      <img src="{{section.settings.whatsdiff_img | img_url: 'master'}}" alt="">
+      <img class="lazy2" data-src="{{section.settings.whatsdiff_img | img_url: 'master'}}" alt="">
       {%- endif -%}
     </a>
 </div>
