@@ -5,7 +5,7 @@
       <!--=======  single shoppable  =======-->
 
       <div class="single-shoppable single-shoppable--width-half">
-        <img src="{% if section.settings.banner_img != blank %} {{ section.settings.banner_img | img_url: 'master' }}{% else %} https://via.placeholder.com/1920x550 {% endif %}" class="img-fluid" alt="{{ section.settings.banner_img.alt }}">
+        <img data-src="{% if section.settings.banner_img != blank %} {{ section.settings.banner_img | img_url: 'master' }}{% else %} https://via.placeholder.com/1920x550 {% endif %}" class="lazyload img-fluid" alt="{{ section.settings.banner_img.alt }}">
 		 {% for block in section.blocks %}
          {% case.block.type %}
          {% when "lookbook_product_add" %}

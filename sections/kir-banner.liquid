@@ -1,7 +1,7 @@
 {% if section.settings.section_enable %}
 <div class="kir--hero--bnr" id="section-{{ section.id }}">
   <div class="image">
-  	<img class="bnrImg" src="{% if section.settings.banner_img != blank %} {{ section.settings.banner_img | img_url: 'master' }}{% else %} https://via.placeholder.com/1920x805 {% endif %}" class="lazyload img-fluid" alt="">
+  	<img class="bnrImg" data-src="{% if section.settings.banner_img != blank %} {{ section.settings.banner_img | img_url: 'master' }}{% else %} https://via.placeholder.com/1920x805 {% endif %}" class="lazyload img-fluid" alt="">
   </div>
   
   {%- comment -%}

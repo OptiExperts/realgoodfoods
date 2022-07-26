@@ -112,9 +112,9 @@
           <div class="collection_img">
             <a href="{{ featured_product.url }}">
               {% if block.settings.collection_img == 'default' %}
-              <img src="{% if featured_product.image.src != blank %} {{ featured_product.image.src | collection_img_url: '385x470', crop: 'center' }} {% else %} https://via.placeholder.com/385x470 {% endif %}" class="img-fluid" alt="{{ featured_product.image.src.alt }}">
+              <img data-src="{% if featured_product.image.src != blank %} {{ featured_product.image.src | collection_img_url: '385x470', crop: 'center' }} {% else %} https://via.placeholder.com/385x470 {% endif %}" class="lazyload img-fluid" alt="{{ featured_product.image.src.alt }}">
               {% elsif block.settings.collection_img == 'custom' %}
-              <img src="{% if block.settings.custom_collection_img != blank %}{{ block.settings.custom_collection_img | img_url: '385x470', crop: 'center' }} {% else %} https://via.placeholder.com/385x470 {% endif %} " class="img-fluid" alt="{{ block.settings.custom_collection_img.alt }}">
+              <img data-src="{% if block.settings.custom_collection_img != blank %}{{ block.settings.custom_collection_img | img_url: '385x470', crop: 'center' }} {% else %} https://via.placeholder.com/385x470 {% endif %} " class="lazyload img-fluid" alt="{{ block.settings.custom_collection_img.alt }}">
               {% endif %}
             </a>
           </div>

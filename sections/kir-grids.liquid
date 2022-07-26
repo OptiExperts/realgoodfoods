@@ -20,7 +20,7 @@
             <div class="col-md-6 image">
               <div class="inner">
                 {%- if block.settings.grid_image -%}
-                	<img src="{{ block.settings.grid_image | img_url: '650x560' }}" alt="" class="lazyload">
+                	<img data-src="{{ block.settings.grid_image | img_url: '650x560' }}" alt="" class="lazyload">
                 {% endif %}
               </div>
             </div>

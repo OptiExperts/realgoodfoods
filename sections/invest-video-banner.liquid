@@ -4,12 +4,12 @@
     
     <div class="img {% if section.settings.hh_banner_img_mob != blank %}hasMobBnr{% endif %}">
       {% if section.settings.hh_banner_img != blank %}
-      <img src="{{ section.settings.hh_banner_img | img_url: '1920x475' }}" alt="" class="lazyload">
+      <img data-src="{{ section.settings.hh_banner_img | img_url: '1920x475' }}" alt="" class="lazyload">
       {% else %}
-      <img src="https://via.placeholder.com/1920x475" alt="" class="lazyload">
+      <img data-src="https://via.placeholder.com/1920x475" alt="" class="lazyload">
       {% endif %}
       {% if section.settings.hh_banner_img_mob != blank %}
-      <img src="{{ section.settings.hh_banner_img_mob | img_url: '768x420' }}" alt="" class="lazyload mobile">
+      <img data-src="{{ section.settings.hh_banner_img_mob | img_url: '768x420' }}" alt="" class="lazyload mobile">
       {% endif %}
     </div>
     <div class="video">

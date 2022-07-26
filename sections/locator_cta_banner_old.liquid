@@ -36,8 +36,8 @@
     <img data-src="{{ section.settings.section_bg_img_mob | img_url: 'master' }}" alt="" class="section_bg_img mobile lazy">
     {% endcomment %}
     
-    <img data-src="{{ section.settings.section_bg_img | img_url: '1000x505' }}" alt="" class="section_bg_img lazy">
-    <img data-src="{{ section.settings.section_bg_img_mob | img_url: '768x385' }}" alt="" class="section_bg_img mobile lazy"> 
+    <img data-src="{{ section.settings.section_bg_img | img_url: '1000x505' }}" alt="" class="lazyload section_bg_img lazy">
+    <img data-src="{{ section.settings.section_bg_img_mob | img_url: '768x385' }}" alt="" class="lazyload section_bg_img mobile lazy"> 
    
     {% if section.settings.cta3_btn != blank %}
     <div class="cta-button cta--btn-3 right--sidebtn">

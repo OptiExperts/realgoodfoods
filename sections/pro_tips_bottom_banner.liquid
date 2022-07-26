@@ -4,14 +4,14 @@
   <a class="banner_link" href="{{ section.settings.banner_link }}">
   {% endif %}
     <div class="image">
-      <img class="bnrImg" src="{% if section.settings.banner_img != blank %} {{ section.settings.banner_img | img_url: 'master' }}{% else %} https://via.placeholder.com/922x329 {% endif %}" class="lazyload img-fluid" alt="">
-      <img class="bnrImg mobile" src="{% if section.settings.banner_img_mob != blank %} {{ section.settings.banner_img_mob | img_url: 'master' }} {% endif %}" class="lazyload img-fluid" alt="">
+      <img class="bnrImg" data-src="{% if section.settings.banner_img != blank %} {{ section.settings.banner_img | img_url: 'master' }}{% else %} https://via.placeholder.com/922x329 {% endif %}" class="lazyload img-fluid" alt="">
+      <img class="bnrImg mobile" data-src="{% if section.settings.banner_img_mob != blank %} {{ section.settings.banner_img_mob | img_url: 'master' }} {% endif %}" class="lazyload img-fluid" alt="">
     </div>
     
     <div class="heading">
       <h1>
         {{ section.settings.banner_heading }}
-        <img class="icon" src="{% if section.settings.heading_icon != blank %} {{ section.settings.heading_icon | img_url: 'master' }} {% endif %}" class="lazyload img-fluid" alt="">
+        <img class="icon" data-src="{% if section.settings.heading_icon != blank %} {{ section.settings.heading_icon | img_url: 'master' }} {% endif %}" class="lazyload img-fluid" alt="">
       </h1>
     </div>
     
