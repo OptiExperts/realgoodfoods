@@ -14,7 +14,7 @@
         {%- endif -%}
         {% if block.settings.hh_banner_img != blank %}
         <div class="hero--img">
-          <img src="{{ block.settings.hh_banner_img | img_url: 'master' }}" alt="">
+          <img class="lazy2" data-src="{{ block.settings.hh_banner_img | img_url: 'master' }}" alt="">
         </div>
         {% endif %}
       {%- if block.settings.hh_banner_url != '' -%}
