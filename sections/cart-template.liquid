@@ -22,7 +22,7 @@
                 {% for item in cart.items %}
                 <tr class="cart_rows" idss="{{item.id}}">
                   <td class="product-thumbnail pro-thumbnail">
-                    <a href="{{ item.url }}"><img src="{{ item | img_url: 'compact' }}" alt="{{ item.title | escape }}" /></a>
+                    <a href="{{ item.url }}"><img class="lazyload" data-src="{{ item | img_url: 'compact' }}" alt="{{ item.title | escape }}" /></a>
                   </td>
                   <td class="product-name pro-name">
                      <a href="{{ item.url }}">{{ item.product.title }}
@@ -130,7 +130,7 @@
         <div class="empty-cart-page text-center">
           <h4 class="empty_cart_title">{{ section.settings.shopping_cart_title }}</h4>
           <div class="empty__cart_img">
-            <img src="{% if section.settings.empty_cart_img != blank %}{{ section.settings.empty_cart_img | img_url: 'master' }} {% else %}  https://cdn.shopify.com/s/files/1/0132/3116/1408/files/cart.png?13612 {% endif %}" alt="{{ section.settings.empty_cart_img.alt }}" >
+            <img class="lazyload" data-src="{% if section.settings.empty_cart_img != blank %}{{ section.settings.empty_cart_img | img_url: 'master' }} {% else %}  https://cdn.shopify.com/s/files/1/0132/3116/1408/files/cart.png?13612 {% endif %}" alt="{{ section.settings.empty_cart_img.alt }}" >
           </div>
           <h5 class="mb-30">{{ section.settings.cart_empty_title }}</h5>
           <p><a class="lezada-button lezada-button--small" href="/collections/all"><i class="fa fa-angle-left" aria-hidden="true"></i> {{ section.settings.cart_continue_title }}</a></p>

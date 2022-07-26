@@ -3,7 +3,7 @@
   <div class="container">
     <div class="videoWrap">
       <div class="image">
-        <img class="bnrImg" src="{% if section.settings.vid_img != blank %} {{ section.settings.vid_img | img_url: 'master' }}{% else %} https://via.placeholder.com/900x508 {% endif %}" class="lazyload img-fluid" alt="">
+        <img class="bnrImg lazyload" data-src="{% if section.settings.vid_img != blank %} {{ section.settings.vid_img | img_url: 'master' }}{% else %} https://via.placeholder.com/900x508 {% endif %}" class="lazyload img-fluid" alt="">
       </div>
       <div class="video">
         <div class="inner">

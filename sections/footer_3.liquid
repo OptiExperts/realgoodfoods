@@ -20,7 +20,7 @@
 
         <div class="store-icons"> 
           <a href="{{ block.settings.app_link }}"> 
-          	<img src="{% if block.settings.apps_logo != blank %}{{ block.settings.apps_logo | img_url: '344x48' }} {% else %} https://via.placeholder.com/344x48 {% endif %}" class="img-fluid" alt="">
+          	<img data-src="{% if block.settings.apps_logo != blank %}{{ block.settings.apps_logo | img_url: '344x48' }} {% else %} https://via.placeholder.com/344x48 {% endif %}" class="lazyload img-fluid" alt="">
           </a>
        </div>
       </div>

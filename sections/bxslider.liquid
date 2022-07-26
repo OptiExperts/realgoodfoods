@@ -16,7 +16,7 @@
             {%- for block in section.blocks -%}
                   <div class="eachReview">
                     <div class="reviewTop">
-                      <div class="reviewHead"><img src="{{ block.settings.reviewer_image | img_url: '160x160' }}" ></div>
+                      <div class="reviewHead"><img class="lazyload" data-src="{{ block.settings.reviewer_image | img_url: '160x160' }}" ></div>
                       <div class="reviewerName">
                         <div class="reviewerNameTop"><span class="reviewer">{{ block.settings.review_head }} <i></i></span> recommends <span class="brand">Real Good Foods</span></div>
                         <div class="reviewDate">{{ block.settings.review_date }} <i></i></div>

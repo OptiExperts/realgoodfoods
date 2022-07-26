@@ -7,7 +7,7 @@
           {%- if section.settings.featured_banner_image -%}
           <img class="lazyload" data-src="{{ section.settings.featured_banner_image | img_url: 'grande' }}">
           {%- else -%}
-          <img src="https://via.placeholder.com/828x707">
+          <img class="lazyload" data-src="https://via.placeholder.com/828x707">
           {%- endif -%}
         </div>
       </div>
