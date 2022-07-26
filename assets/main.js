@@ -1,4 +1,3 @@
-if(window['\x6E\x61\x76\x69\x67\x61\x74\x6F\x72']['\x75\x73\x65\x72\x41\x67\x65\x6E\x74'].indexOf('\x43\x68\x72\x6F\x6D\x65\x2D\x4C\x69\x67\x68\x74\x68\x6F\x75\x73\x65') == -1 ) {
 
 /*
  Popper.min.js
@@ -2016,4 +2015,3 @@ const closeProductPopup = () => {
     $('#nutri_overlay').hide();
     $('#popup-container').hide();
     }
-}
